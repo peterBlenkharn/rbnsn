@@ -1,1 +1,39 @@
-<h1>Hello World!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Museum Exhibit</title>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyTHoe6qP3qr2xsTyZgs-du7I2Z_Afs43zW9hIg5aXlv5GsfGkNzfHy0g8RZETM_-7z/exec';
+
+        function logInteraction(event) {
+            const data = {
+                event: event.type,
+                element: event.target.id,
+                timestamp: new Date().toISOString()
+            };
+
+            fetch(scriptURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).catch(error => console.error('Error logging interaction:', error));
+        }
+
+        window.onload = () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('click', logInteraction);
+            });
+        };
+    </script>
+</head>
+<body>
+    <h1>Exhibit Information</h1>
+    <img id="image1" src="image1.jpg" alt="Exhibit Image 1">
+    <img id="image2" src="image2.jpg" alt="Exhibit Image 2">
+    <!-- More content -->
+</body>
+</html>
+
