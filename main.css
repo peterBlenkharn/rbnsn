@@ -3,3 +3,48 @@
   width: 100vw;
   height: 10vh;
 }
+
+.text-block-13{
+  color: #fff000;
+  font-size: 48px;
+}
+
+.text-block-13.b{
+  font-size:36px;
+}
+
+.div-block-82{
+  flex-flow:column;
+  justify-content:flex-start;
+  align-items:center;
+  height:auto;
+}
+
+.div-block-83{
+  background-color:#333;
+  width: 100vw;
+  height:100vh;
+  position: fixed;
+  bottom: 0;
+}
+
+.div_mr_mainblock{
+  background-color:#333;
+  width: 100vw;
+}  
+
+.div_contentblockrow{
+  display:flex;
+}
+
+.div_contentblock, .div-block-87{
+  width: 25vw;
+  height: 25vw;
+}
+
+.image_mr_main{
+  aspect-ration:auto;
+  object-fit:cover;
+}
+
+
