@@ -3,6 +3,8 @@
   width: 100vw;
   height: 10vh;
   align-items:center;
+  justify-content:center;
+  display:flex;
 }
 
 .text-block-13{
