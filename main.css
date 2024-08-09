@@ -43,10 +43,11 @@
 .div_contentblock, .div-block-87{
   width: 25vw;
   height: 25vw;
+  overflow: hidden;
 }
 
 .image_mr_main{
-  aspect-ration:auto;
+  aspect-ratio:auto;
   object-fit:cover;
 }
 
