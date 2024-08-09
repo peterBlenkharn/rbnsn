@@ -4,6 +4,10 @@ body, html {
   box-sizing: border-box; /* Ensure padding and border are included in element's width and height */
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 .div_mrfooter{
   background-color: #333;
   width: 100vw;
