@@ -59,6 +59,7 @@ body, html {
 .image_mr_main{
   aspect-ratio:auto;
   width:100%;
+  height:100%;
   object-fit:cover;
 }
 
