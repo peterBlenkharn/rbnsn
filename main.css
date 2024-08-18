@@ -77,5 +77,18 @@ body, html {
   position:fixed;
   inset: 0%;
 }
+.div_shadowbox_text{
+    width: 75vw;
+    height: 20vw;
+    margin-top: 5vh;
+}
+
+.image_shadowbox{
+  object-fit:cover;
+  width: 100vw;
+
+}
+
+  
 
 
