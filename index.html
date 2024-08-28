@@ -27,12 +27,12 @@
             images.forEach(img => {
                 img.addEventListener('click', logInteraction);
             });
-            const images = document.querySelectorAll('.image_mr_main');
+            const grid_images = document.querySelectorAll('.image_mr_main');
             const shadowbox = document.querySelector('.div_shadowbox');
             const shadowboxImage = document.querySelector('.div_shadowbox_image img');
             const shadowboxText = document.querySelector('.div_shadowbox_text');
         
-            images.forEach(img => {
+            grid_images.forEach(img => {
                 img.addEventListener('click', function(event) {
                     // Log the interaction
                     logInteraction(event);
