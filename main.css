@@ -78,10 +78,15 @@ body, html {
     position: fixed;
     inset: 0%;
 }
-.div_shadowbox_text{
-    width: 75vw;
-    height: 20vw;
-    padding-top: 5vh;
+.div_shadowbox_text {
+    width: 75vw; /* Keep the width consistent */
+    color: white; /* Text color for readability */
+    text-align: left; /* Left-align the text */
+    padding: 5vh 10vw; /* Padding: 5vh top, 10vw left/right */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    max-height: calc(100vh - 5% - 20vh); /* Adjust max height to prevent overflow */
+    box-sizing: border-box; /* Include padding in height calculation */
+    margin-bottom: 5vh; /* Space at the bottom for aesthetics */
 }
 
 .image_shadowbox{
