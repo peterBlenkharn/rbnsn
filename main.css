@@ -76,16 +76,19 @@ body, html {
     position:fixed;
     z-index:1;
     inset:0%;
+    touch-action:manipulation;
 }
 
 .div_shadowbox_image {
     width: 100%;
     text-align: center;
+    touch-action:manipulation;
 }
 
 .image_shadowbox {
     max-width: 100%; /* Make sure the image does not exceed the width of the container */
     height: auto;   /* Maintain the aspect ratio */
+    touch-action:manipulation;
 }
 
 .div_shadowbox_text {
