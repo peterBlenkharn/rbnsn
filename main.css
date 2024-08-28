@@ -64,39 +64,31 @@ body, html {
 }
 
 .div_shadowbox {
-  display: none; /* Hide the shadowbox by default */
-  z-index: 1;
-  background-color: #000000bf;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 5%;
-  box-sizing: border-box;
-  text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;    /* Center children horizontally */
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for visual effect */
+    padding: 16px;
+    margin: 16px;
+    background-color: #fff;
+    border-radius: 8px;
 }
 
 .div_shadowbox_image {
-  width: 75vw;
-  max-height: 50vh;
-  margin: 0 auto; /* Center the image horizontally */
+    width: 100%;
+    text-align: center;
 }
 
 .image_shadowbox {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+    max-width: 100%; /* Make sure the image does not exceed the width of the container */
+    height: auto;   /* Maintain the aspect ratio */
 }
 
 .div_shadowbox_text {
-  color: #fff;
-  width: 75vw;
-  max-height: 30vh;
-  overflow-y: auto;
-  padding: 2vh;
-  margin: 2vh auto; /* Add top margin and center horizontally */
-  background-color: rgba(0, 0, 0, 0.5); /* Add a background for visibility */
+    margin-top: 16px; /* Space between image and text */
+    text-align: justify;
+    color: #333;
 }
 
   
