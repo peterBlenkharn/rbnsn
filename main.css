@@ -89,8 +89,6 @@ body, html {
 .div_shadowbox_image {
     width: 75vw;
     max-height: 50vh; /* Ensure there's a cap on height */
-    margin-bottom: 2vh;
-    display: flex;
 }
 
 .image_shadowbox {
