@@ -66,41 +66,29 @@ body, html {
 .div_shadowbox {
     display: none; /* Hide the shadowbox by default */
     z-index: 1;
-    background-color: #000000bf; /* Semi-transparent black background */
+    background-color: #000000bf;
     flex-flow: column;
-    justify-content: flex-start;
+    flex: 1;
+    justify-content: center;
+    align-self: stretch;
     align-items: center;
     width: 100%;
     height: 100%;
+    padding-top: 5%;
     position: fixed;
     inset: 0%;
-    padding-top: 5vh; /* Top padding to space from the top of the screen */
-    box-sizing: border-box; /* Include padding in size calculations */
+}
+.div_shadowbox_text{
+    width: 75vw;
+    height: 20vw;
+    padding-top: 5vh;
 }
 
-.div_shadowbox_image {
-    width: 75vw; /* Set the width to 75% of the viewport width */
-    height: auto; /* Maintain the aspect ratio */
-    max-height: 50vh; /* Limit the image's height to a maximum of 50% of the viewport height */
-    margin-bottom: 2vh; /* Space between the image and the text */
-    box-sizing: border-box; /* Include padding and margin in size calculations */
-}
-
-.image_shadowbox {
-    width: 100%; /* Image takes up the full width of its container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Adjust image to fit within the container without clipping */
-    max-height: 50vh; /* Limit the maximum height to half the viewport height */
-}
-
-.div_shadowbox_text {
-    width: 75vw; /* Width of the text area */
-    color: white; /* White text color */
-    text-align: left; /* Left-align the text */
-    padding: 5vh 10vw 5vh 10vw; /* Padding: 5vh top and bottom, 10vw left and right */
-    overflow-y: auto; /* Allow vertical scrolling if content overflows */
-    flex: 1; /* Take up remaining space in the shadowbox */
-    box-sizing: border-box; /* Include padding in width and height calculations */
+.image_shadowbox{
+    aspect-ratio:auto;
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
   
