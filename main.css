@@ -79,21 +79,22 @@ body, html {
     inset: 0%;
 }
 .div_shadowbox_text {
-    width: 75vw; /* Keep the width consistent */
-    color: white; /* Text color for readability */
-    text-align: left; /* Left-align the text */
-    padding: 5vh 10vw; /* Padding: 5vh top, 10vw left/right */
-    overflow-y: auto; /* Allow vertical scrolling if content overflows */
-    max-height: calc(100vh - 5% - 20vh); /* Adjust max height to prevent overflow */
-    box-sizing: border-box; /* Include padding in height calculation */
-    margin-bottom: 5vh; /* Space at the bottom for aesthetics */
+  color: #fff;
+  width: 75vw;
+  height: 15vw;
+  margin-top: 5vh;
+  padding-top: 5vh;
+  overflow: auto;
 }
 
 .div_shadowbox_image {
+    justify-content:center;
+    align-self: center;
+    align-items:center;
+    display: flex;
     width: 75vw; /* Image width */
     height: auto; /* Auto height to maintain aspect ratio */
-    max-height: 50vh; /* Limit the maximum height of the image to half the viewport height */
-    margin-bottom: 2vh; /* Space between the image and the text */
+    max-height: 65vh; /* Limit the maximum height of the image to half the viewport height */
 }
 
 .image_shadowbox{
