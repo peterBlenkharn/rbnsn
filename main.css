@@ -77,13 +77,11 @@ body, html {
     padding-top: 5%;
     box-sizing: border-box;
 }
+
 .div_shadowbox_text {
   color: #fff;
   width: 75vw;
   height: 15vw;
-  margin-top: 5vh;
-  padding-top: 5vh;
-  overflow: auto;
 }
 
 .div_shadowbox_image {
