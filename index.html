@@ -6,22 +6,40 @@
     <link rel="stylesheet" href="main.css">
     <script>
         const scriptURL = 'https://europe-west2-mary-robinson-exhibition.cloudfunctions.net/logInteraction'; 
-        function logInteraction(event) {
-            const data = {
-                event: event.type,
-                element: event.target.id,
-                timestamp: new Date().toISOString()
-            };
 
-            fetch(scriptURL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            }).catch(error => console.error('Error logging interaction:', error));
+        let isShadowboxOpen = false; // State variable to track if the shadowbox is open
+
+        // Debounce function: ensures the function is called only once within the specified delay
+        function debounce(func, delay) {
+            let timeout;
+            return function(...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(this, args), delay);
+            };
+        }
+        
+        
+        function logInteraction(event) {
+         if (!isShadowboxOpen) {      
+            const data = {
+                    event: event.type,
+                    element: event.target.id,
+                    timestamp: new Date().toISOString()
+                };
+    
+                fetch(scriptURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                }).catch(error => console.error('Error logging interaction:', error));
+            }
         }
 
+        // Wrap the logInteraction function with debounce
+        const debouncedLogInteraction = debounce(logInteraction, 300); // Adjust the delay as needed (300ms is a common choice)
+        
         window.onload = () => {
             const images = document.querySelectorAll('img');
             images.forEach(img => {
@@ -35,7 +53,7 @@
             grid_images.forEach(img => {
                 img.addEventListener('click', function(event) {
                     // Log the interaction
-                    logInteraction(event);
+                    debouncedLogInteraction(event);
         
                     // Update the shadowbox image source
                     shadowboxImage.src = img.src;
@@ -45,6 +63,7 @@
         
                     // Show the shadowbox
                     shadowbox.style.display = 'flex';
+                    shadowboxIsOpen = true; // Set flag to true when shadowbox is open
                 });
             });
         
@@ -52,6 +71,7 @@
             shadowbox.addEventListener('click', function(event) {
                 if (event.target === shadowbox) {
                     shadowbox.style.display = 'none';
+                    shadowboxIsOpen = false; // Reset flag when shadowbox is closed
                 }
             });
         };
