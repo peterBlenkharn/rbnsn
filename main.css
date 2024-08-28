@@ -89,6 +89,13 @@ body, html {
     margin-bottom: 5vh; /* Space at the bottom for aesthetics */
 }
 
+.div_shadowbox_image {
+    width: 75vw; /* Image width */
+    height: auto; /* Auto height to maintain aspect ratio */
+    max-height: 50vh; /* Limit the maximum height of the image to half the viewport height */
+    margin-bottom: 2vh; /* Space between the image and the text */
+}
+
 .image_shadowbox{
     aspect-ratio:auto;
     width:100%;
