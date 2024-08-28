@@ -64,42 +64,39 @@ body, html {
 }
 
 .div_shadowbox {
-    display: none; /* Hide the shadowbox by default */
-    z-index: 1;
-    background-color: #000000bf;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align items at the top */
-    align-items: center; /* Center items horizontally */
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    inset: 0;
-    padding-top: 5%;
-    box-sizing: border-box;
-}
-
-.div_shadowbox_text {
-    color: #fff;
-    width: 75vw; /* Keep the width consistent with the image */
-    max-height: 30vh; /* Restrict the text area height */
-    overflow-y: auto; /* Enable scrolling if content overflows */
-    padding: 2vh; /* Add some padding for better readability */
-    margin-top: 2vh; /* Ensure there's space between the image and the text */
-    box-sizing: border-box; /* Include padding in width and height calculations */
-    flex-grow: 1; /* Allow text area to take up remaining space */
+  display: none; /* Hide the shadowbox by default */
+  z-index: 1;
+  background-color: #000000bf;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 5%;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .div_shadowbox_image {
-    width: 75vw;
-    max-height: 50vh; /* Cap the height to avoid excessive space */
-    margin-bottom: 2vh; /* Add some space below the image to separate it from the text */
+  width: 75vw;
+  max-height: 50vh;
+  margin: 0 auto; /* Center the image horizontally */
 }
 
 .image_shadowbox {
-    width: 100%; /* Image should take up the full width of its container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Use 'contain' to ensure the image fits well */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.div_shadowbox_text {
+  color: #fff;
+  width: 75vw;
+  max-height: 30vh;
+  overflow-y: auto;
+  padding: 2vh;
+  margin: 2vh auto; /* Add top margin and center horizontally */
+  background-color: rgba(0, 0, 0, 0.5); /* Add a background for visibility */
 }
 
   
