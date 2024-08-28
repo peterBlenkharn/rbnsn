@@ -91,9 +91,6 @@ body, html {
     max-height: 50vh; /* Ensure there's a cap on height */
     margin-bottom: 2vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
 }
 
 .image_shadowbox {
