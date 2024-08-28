@@ -27,7 +27,35 @@
             images.forEach(img => {
                 img.addEventListener('click', logInteraction);
             });
+            const images = document.querySelectorAll('.image_mr_main');
+            const shadowbox = document.querySelector('.div_shadowbox');
+            const shadowboxImage = document.querySelector('.div_shadowbox_image img');
+            const shadowboxText = document.querySelector('.div_shadowbox_text');
+        
+            images.forEach(img => {
+                img.addEventListener('click', function(event) {
+                    // Log the interaction
+                    logInteraction(event);
+        
+                    // Update the shadowbox image source
+                    shadowboxImage.src = img.src;
+        
+                    // Optionally, update the shadowbox text (if each image has unique text)
+                    shadowboxText.textContent = 'This is some text related to the image.'; // Replace with actual text if needed
+        
+                    // Show the shadowbox
+                    shadowbox.style.display = 'flex';
+                });
+            });
+        
+            // Close shadowbox on click outside the image
+            shadowbox.addEventListener('click', function(event) {
+                if (event.target === shadowbox) {
+                    shadowbox.style.display = 'none';
+                }
+            });
         };
+
     </script>
 </head>
 <body>
