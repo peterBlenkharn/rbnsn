@@ -66,31 +66,35 @@ body, html {
 .div_shadowbox {
     display: none; /* Hide the shadowbox by default */
     z-index: 1;
-    background-color: #000000bf;
+    background-color: #000000bf; /* Semi-transparent black background */
     flex-flow: column;
-    flex: 1;
-    justify-content: center;
-    align-self: stretch;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 100%;
-    padding-top: 5%;
     position: fixed;
     inset: 0%;
-}
-.div_shadowbox_text{
-    width: 75vw;
-    height: 20vw;
-    margin-top: 5vh;
+    padding-top: 5vh; /* Ensure some top padding */
+    box-sizing: border-box; /* Include padding in the height calculation */
 }
 
-.image_shadowbox{
-    aspect-ratio:auto;
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.div_shadowbox_image {
+    width: 75vw; /* Image width */
+    height: auto; /* Auto height to maintain aspect ratio */
+    max-height: 50vh; /* Limit the maximum height of the image to half the viewport height */
+    margin-bottom: 2vh; /* Space between the image and the text */
 }
 
+.div_shadowbox_text {
+    width: 75vw; /* Width of the text area */
+    color: white; /* White text color */
+    text-align: left; /* Left-align the text */
+    padding: 5vh 10vw 5vh 10vw; /* Padding: 5vh top and bottom, 10vw left and right */
+    overflow-y: auto; /* Vertical scroll if content overflows */
+    max-height: calc(100vh - 5vh - 50vh - 2vh); /* Calculate remaining space: total height minus padding and image */
+    box-sizing: border-box; /* Include padding in width and height calculations */
+    margin-bottom: 5vh; /* Additional space at the bottom */
+}
   
 
 
