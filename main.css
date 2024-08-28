@@ -51,8 +51,8 @@ body, html {
 }
 
 .div_contentblock, .div-block-87{
-  width: 25vw;
-  height: 25vw;
+  width: calc(100vw / 3);
+  height: calc(100vw / 3);
   overflow: hidden;
 }
 
@@ -64,7 +64,7 @@ body, html {
 }
 
 .div_shadowbox {
-    display: flex;
+    display: none;
     flex-flow:column;
     flex:1;
     align-self:stretch;
