@@ -49,8 +49,8 @@ body, html {
   position: fixed;
   bottom: 0;
   color:#fff000;
-  padding-top:20px;
-  line-height: 10%;
+  padding-top:50px;
+  text-align:center;
   font-size: 32px;
 }
 
