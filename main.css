@@ -48,6 +48,8 @@ body, html {
   height:10%;
   position: fixed;
   bottom: 0;
+  color:#fff000;
+  text-align:center;
 }
 
 .div_mr_mainblock{
