@@ -50,6 +50,8 @@ body, html {
   bottom: 0;
   color:#fff000;
   text-align:center;
+  line-height: 10%;
+  font-size: 24px;
 }
 
 .div_mr_mainblock{
